@@ -1,82 +1,63 @@
 import Head from 'next/head'
 
-export default function Home() {
+import Environment from '../components/environment'
+import Message from '../components/message'
+import Avatar from '../components/avatar'
+import Projects from '../components/projects'
+
+export default function Index() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="bg-light min-h-screen w-screen overflow-hidden">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <main>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+        <Environment theme="light">
+          <div className="flex flex-col-reverse md:flex-row md:items-end md:justify-between relative">
+            <Message
+              title={
+                [
+                  <span className="hidden md:inline leading-tight">Hi! </span>,
+                  'I’m a ', 
+                  <span className="text-green leading-tight">
+                    Product Designer
+                  </span>, 
+                  <span className="leading-tight"> with 10+ years experience in the digital space.</span>
+                ]
+              }
+            />
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+            <Avatar />
+          </div>
+        </Environment>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+        <Environment theme="dark">
+          <Message
+            title="The Digital Space."
+            subtitle="Since 2008, I’ve worked with companies to design &amp; build products with an impact."
+            summary={
+              [
+                <span className="opacity-70">So far that has ranged from a mission to </span>, 
+                <span className="font-bold">improve the health &amp; well-being of everyone on the planet </span>, 
+                <span className="opacity-70">to changing the media landscape by </span>, 
+                <span className="font-bold text-opacity-100">empowering citizen journalists</span>, 
+                <span className="opacity-70">. Others include helping a museum </span>, 
+                <span className="font-bold text-opacity-100">enhance an exhibit for low-vision/blind visitors </span>, 
+                <span className="opacity-70">to providing physicians with the tools to </span>, 
+                <span className="font-bold text-opacity-100">heal patients with binaural beat therapies</span>, 
+                '.'
+              ]
+            }
+            theme="dark"
+          />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+          <Projects />
+        </Environment>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
     </div>
   )
 }
