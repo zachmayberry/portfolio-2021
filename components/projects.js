@@ -16,14 +16,14 @@ export default function Projects() {
                 <Project 
                     name="Heap for Mac" 
                     summary="Heap aims to help you to merge together the variety of project management systems out there and to have one place to manage tasks assigned to you. Currently in the works to support Basecamp, Trello, Github Projects, and Asana." 
-                    color="#F75432" 
+                    color="#F5224D" 
                     image="/heap-components.jpg"
                     imageWidth={554}
                     imageHeight={646}
                 />
             </div>
 
-            <div className="md:mt-16">
+            <div className="md:mt-24">
                 <Project 
                     name="StartUp Health" 
                     summary="StartUp Health invests in Health Transformers, uniting them into a global army and broadcasting their progress. Why? To improve the health and wellbeing of everyone in the world. They connect Health Transformers into an organized, global community, leveraging network effects, trusted peer support, and collective intelligence." 

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Parallax, Background } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax'
 
 import Environment from '../../components/environment'
 

@@ -15,7 +15,7 @@ export default function Message({ title = '', subtitle = null, summary = null, t
                 }
 
                 {summary &&
-                    <p className="text-2xl pt-4 md:leading-relaxed">
+                    <p className="text-2xl pt-4 md:leading-snug">
                         {summary}
                     </p>
                 }
