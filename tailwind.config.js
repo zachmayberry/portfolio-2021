@@ -20,6 +20,11 @@ module.exports = {
       'sans': ['proxima-nova', ...defaultTheme.fontFamily.sans],
       'serif': ['cubano', ...defaultTheme.fontFamily.serif]
     },
+    extend: {
+      height: {
+        'screen-half': '50vh'
+      }
+    }
   },
   variants: {
     extend: {},
