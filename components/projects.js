@@ -2,7 +2,7 @@ import Project from './project'
 
 export default function Projects() {
     return (
-        <div className="md:flex md:space-x-5 md:mt-16">
+        <div className="md:flex md:space-x-6 md:mt-16">
             <div>
                 <Project 
                     name="HealthTunes" 

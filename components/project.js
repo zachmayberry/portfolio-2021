@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Project({ name, summary, color, image, imageWidth, imageHeight }) {
     return (
         <div 
-            className="rounded-2xl p-4 text-white mb-5 max-w-md cursor-pointer"
+            className="rounded-2xl p-4 text-white mb-6 max-w-md cursor-pointer"
             style={{ backgroundColor: color }}
         >   
             <div className="relative rounded-2xl h-60 mb-2 overflow-hidden">
@@ -13,7 +13,7 @@ export default function Project({ name, summary, color, image, imageWidth, image
                     </div>
                 </div>
             </div>
-            <div className="p-4">
+            <div className="p-3">
                 <h1 className="font-bold text-2xl pb-2">{name}</h1>
                 <p className="text-lg leading-snug">{summary}</p>
             </div>
