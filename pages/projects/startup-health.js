@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Parallax, Background } from 'react-parallax'
 
-import Environment from '../../components/environment'
-
+import Header from '../../components/header'
 import suhImage from '../../public/suhhub-top-screenshot@2x.png'
 
 export default function Index() {
@@ -15,20 +12,11 @@ export default function Index() {
             </Head>
 
             <main className="pt-32">
-                <div className="relative z-0">
-                    <Parallax strength={300} className="h-screen-half md:h-screen w-screen">
-                        <div className="text-center max-w-6xl mx-auto md:space-x-12 px-10 lg:px-0">
-                            <h1 className="uppercase font-serif font-bold text-5xl md:text-6xl">Design. Build. Repeat.</h1>
-                            <h2 className="font-bold text-3xl md:text-4xl opacity-30 pt-2">StartUp Health</h2>
-                        </div>
-                        <Background className="pt-52 w-screen max-w-4xl px-10">
-                            <Image
-                                src={suhImage}
-                                alt="SUH"
-                            />
-                        </Background>
-                    </Parallax>
-                </div>
+                <Header 
+                    title="Design. Build. Repeat."
+                    subtitle="StartUp Health"
+                    img={suhImage}
+                />
 
                 <div className="bg-white md:-mt-60 h-screen relative z-10">
                     <div className="md:flex max-w-6xl mx-auto pt-16 md:space-x-12 px-10 lg:px-0">
